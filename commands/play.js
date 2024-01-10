@@ -71,7 +71,7 @@ module.exports = {
       await queue.addTrack(song);
 
       embed
-        .setDescription(`added **[${song.title}][${song.url}]** to the jukebox`)
+        .setDescription(`added **[${song.title}][${song.url}]** to jukebox`)
         .setThumbnail(song.thumbnail)
         .setFooter({text: `duration: ${song.duration}`});
     } else if (interaction.options.getSubcommand() == 'barrel') {

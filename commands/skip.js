@@ -23,7 +23,7 @@ module.exports = {
     await interaction.reply({
       embeds: [
         new EmbedBuilder()
-          .setDescription(`skipped **${currentSong.title}**`)
+          .setDescription(`jumped **${currentSong.title}**`)
           .setThumbnail(currentSong.thumbnail)
       ]
     })
