@@ -19,13 +19,35 @@ function messageHandler(client, msg) {
     msg.reply('uwu');
 
   // greet
-  const greetsEN = ['hello', 'hi', 'hey', 'yo', 'sup'];
+  const greetsEN = ['hello', 'hi', 'hey', 'yo', 'sup', 'yala'];
   const greetsKR = ['헬로우', '하이', '안녕', '안뇽'];
   if (!msg.author.bot && greetsEN.some(greeting => msgLower.includes(greeting))) {
     const reply = greetsEN[Math.floor(Math.random() * greetsEN.length)];
     msg.reply(reply);
   } else if (!msg.author.bot && greetsKR.some(greeting => msg.content.includes(greeting))) {
     const reply = greetsKR[Math.floor(Math.random() * greetsKR.length)];
+    msg.reply(reply);
+  }
+
+  //  greet - time
+  const morning = ['mornin', 'morning'];
+  const afternoon = ['afternoon', 'arvo'];
+  const night = ['good night', 'nighty night', 'gngn'];
+  if (!msg.author.bot && morning.some(greeting => msgLower.includes(greeting))) {
+    const reply = morning[Math.floor(Math.random() * morning.length)];
+    msg.reply(reply);
+  } else if (!msg.author.bot && afternoon.some(greeting => msgLower.includes(greeting))) {
+    const reply = 'good avocado';
+    msg.reply(reply);
+  } else if (!msg.author.bot && night.some(greeting => msgLower.includes(greeting))) {
+    const reply = 'good night';
+    msg.reply(reply);
+  }
+
+  // bye
+  const bye = ['bye', 'cya'];
+  if (!msg.author.bot && bye.some(farewell => msgLower.includes(farewell))) {
+    const reply = bye[Math.floor(Math.random() * bye.length)];
     msg.reply(reply);
   }
 
