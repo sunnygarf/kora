@@ -12,7 +12,10 @@ This guide outlines the steps to build your own Discord bot with the internals o
 2. [FFmpeg](https://ffmpeg.org/download.html) is used for media transcoding. Install and add its path to your user environment variables.
 3. This program is powered by [Node.js](https://nodejs.org/en). _Node.js v16.20.2_ is used since later versions returned various errors.
 4. Execute the following command to install dependencies:
-   `npm i dotenv discord.js @discordjs/opus discord-player @discord-player/extractor ytdl-core`
+
+   ```
+   npm i dotenv discord.js @discordjs/opus discord-player @discord-player/extractor ytdl-core
+   ```
 
    - [ytdl-core](https://github.com/fent/node-ytdl-core) was chosen as the YouTube streaming library since it allows for additional parameters for better quality audio.
 5. Create a `.env` file and add your Discord bot `TOKEN` and `CLIENTID` details:
